@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Balances</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Coin Name</th>
+                <th>Confirmed (Credited)</th>
+                <th>Auto Ex. Confirmed</th>
+                <th>Exchange</th>
+                <th>Auto Ex. Unconfirmed</th>
+                <th>Unconfirmed</th>
+            </tr>
+            {% for balance in balances %}
+                <tr>
+                    <td>{{ balance["coin"] }}</td>
+                    <td>{{ balance["confirmed"] }}</td>
+                    <td>{{ balance["ae_confirmed"] }}</td>
+                    <td>{{ balance["exchange"] }}</td>
+                    <td>{{ balance["ae_unconfirmed"] }}</td>
+                    <td>{{ balance["unconfirmed"] }}</td>
+                </tr>
+            {% endfor %}
+        </thead>
+    </table>
+
+</body>
+</html>

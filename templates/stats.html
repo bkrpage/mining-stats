@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Balances</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>Coin</th>
+        <th>Algorithm</th>
+        <th>"Normalised" profit (TBC)</th>
+        <th>nVidia "Normalised" profit (TBC)</th>
+        <th>Profit (TBC)</th>
+        <th>Pool Hash Rate</th>
+        <th>Highest Price (in BTC)</th>
+    </tr>
+    {% for stat in stats %}
+        <tr>
+            <td>{{ stat["coin_name"] }}</td>
+            <td>{{ stat["algo"] }}</td>
+            <td>{{ stat["normalized_profit"] }}</td>
+            <td>{{ stat["normalized_profit_nvidia"] }}</td>
+            <td>{{ stat["profit"] }}</td>
+            <td>{{ stat["pool_hash"] }}</td>
+            <td>{{ stat["highest_buy_price"] }}</td>
+        </tr>
+    {% endfor %}
+    </thead>
+</table>
+
+</body>
+</html>
